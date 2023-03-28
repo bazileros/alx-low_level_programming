@@ -1,0 +1,10 @@
+#!/bin/bash
+chmod a+x *
+chmod a-x README.md
+git status
+git add .
+git commit -m '0x05-pointers_arrays_strings'
+git push
+clear
+ls
+git status
