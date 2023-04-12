@@ -1,4 +1,6 @@
 #!/bin/bash
+chmod u+x create_static_lib.sh
+./create_static_lib.sh
 git add .
 git commit -m '0x09 static libraries'
 git push
