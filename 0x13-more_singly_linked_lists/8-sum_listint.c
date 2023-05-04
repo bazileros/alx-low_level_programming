@@ -6,16 +6,16 @@
  *
  * Return: resulting sums
  */
-int sums_listint(listint_t *head)
+int sum_listint(listint_t *head)
 {
-	int sums = 0;
-	listint_t *temp = head;
+        int sums = 0;
+        listint_t *temp = head;
 
-	while (temp)
-	{
-		sums += temp->n;
-		temp = temp->next;
-	}
+        while (temp)
+        {
+                sums += temp->n;
+                temp = temp->next;
+        }
 
-	return (sums);
+        return (sums);
 }
