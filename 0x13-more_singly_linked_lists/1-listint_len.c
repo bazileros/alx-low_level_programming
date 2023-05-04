@@ -1,23 +1,21 @@
-#include <lists.h>
-/*
- * This function returns the number of elements in a linked listint_t list.
+#include "lists.h"
+
+/**
+ * listint_len - returns the number of elements in a linked lists
+ * @h: linked list of type listint_t to traverse
  *
- * Input:
- *      *h: A pointer to the head of the linked list.
- *
- * Output:
- *      The number of elements in the linked list.
+ * Return: number of nodes
  */
 size_t listint_len(const listint_t *h)
 {
-    size_t NumbR = 0;
-    const listint_t *current = h;
+	size_t numbr = 0;
 
-    while (current != NULL)
-    {
-        NumbR++;
-        current = current->next;
-    }
+	while (h)
+	{
+		numbr++;
+		h = h->next;
+	}
 
-    return NumbR;
+	return (numbr);
 }
+

@@ -1,39 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "lists.h"
 
 /**
- * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
+ * pop_listint - deletes the head node of a linked list
+ * @head: pointer to the first element in the linked list
  *
- * Description: singly linked list node structure
- * for Holberton project
- */
-typedef struct listint_s
-{
-    int n;
-    struct listint_s *next;
-} listint_t;
-
-/**
- * pop_listint - Deletes the head node of a listint_t linked list 
- * and returns the head node’s data.
- * @head: Head of the linked list.
- *
- * Return: head node’s data.
+ * Return: the data inside the elements that was deleted,
+ * or 0 if the list is empty
  */
 int pop_listint(listint_t **head)
 {
-    listint_t *temp;
-    int data;
+	listint_t *tmp;
+	int numbr;
 
-    if (!head || !*head)
-        return (0);
+	if (!head || !*head)
+		return (0);
 
-    temp = *head;
-    data = temp->n;
-    *head = temp->next;
-    free(temp);
+	numbr = (*head)->n;
+	tmp = (*head)->next;
+	free(*head);
+	*head = tmp;
 
-    return (data);
+	return (numbr);
 }

@@ -1,40 +1,45 @@
-/* Insert a new node at a given position */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n) {
-    listint_t *new_node;
-    listint_t *current;
-    listint_t *prev;
-    unsigned int i = 0;
+#include "lists.h"
 
-    if (head == NULL)
-        return (NULL);
+/**
+ * insert_nodeint_at_index - inserts a nu node in a linked list,
+ * at a given position
+ * @head: pointer to the first node in the list
+ * @idx: index where the nu node is added
+ * @n: data to insert in the nu node
+ *
+ * Return: pointer to the nu node, or NULL
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+{
+	unsigned int i;
+	listint_t *nu;
+	listint_t *tmp = *head;
 
-    new_node = malloc(sizeof(listint_t));
-    if (new_node == NULL)
-        return (NULL);
+	nu = malloc(sizeof(listint_t));
+	if (!nu || !head)
+		return (NULL);
 
-    new_node->n = n;
-    new_node->next = NULL;
+	nu->n = n;
+	nu->next = NULL;
 
-    current = *head;
-    prev = NULL;
+	if (idx == 0)
+	{
+		nu->next = *head;
+		*head = nu;
+		return (nu);
+	}
 
-    if (idx == 0) {
-        new_node->next = *head;
-        *head = new_node;
-        return (new_node);
-    }
+	for (i = 0; tmp && i < idx; i++)
+	{
+		if (i == idx - 1)
+		{
+			nu->next = tmp->next;
+			tmp->next = nu;
+			return (nu);
+		}
+		else
+			tmp = tmp->next;
+	}
 
-    while (current != NULL && i < idx) {
-        prev = current;
-        current = current->next;
-        i++;
-    }
-
-    if (current == NULL)
-        return (NULL);
-
-    prev->next = new_node;
-    new_node->next = current;
-
-    return (new_node);
+	return (NULL);
 }
