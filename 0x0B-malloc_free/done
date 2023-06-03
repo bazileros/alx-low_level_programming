@@ -1,7 +1,0 @@
-#!/bin/bash
-git add .
-git commit -m '0x0B. C - malloc, free'
-git push
-clear
-ls
-git status
