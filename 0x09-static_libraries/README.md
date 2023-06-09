@@ -1,1 +1,22 @@
-0x09-static_libraries
+These are all function declarations for various string manipulation functions in the C programming language. Here is a brief explanation of each:
+
+- int _putchar(char c) - This function writes a single character to the standard output (usually the console).
+- int _islower(int c) - This function checks if a given character is a lowercase letter.
+- int _isalpha(int c) - This function checks if a given character is an alphabetic letter (either uppercase or lowercase).
+- int _abs(int n) - This function returns the absolute value of a given integer.
+- int _isupper(int c) - This function checks if a given character is an uppercase letter.
+- int _isdigit(int c) - This function checks if a given character is a digit.
+- int _strlen(char *s) - This function returns the length of a string (i.e., the number of characters before the null terminator).
+- void _puts(char *s) - This function writes a string to the standard output (usually the console).
+- char *_strcpy(char *dest, char *src) - This function copies a string from the source to the destination.
+- int _atoi(char *s) - This function converts a string to an integer.
+- char *_strcat(char *dest, char *src) - This function concatenates (i.e., joins) two strings together.
+- char *_strncat(char *dest, char *src, int n) - This function concatenates a specified number of characters from the source string to the destination string.
+- char *_strncpy(char *dest, char *src, int n) - This function copies a specified number of characters from the source string to the destination string.
+- int _strcmp(char *s1, char *s2) - This function compares two strings and returns an integer indicating their relative order (i.e., whether they are equal, greater than, or less than each other).
+- char *_memset(char *s, char b, unsigned int n) - This function sets a specified number of bytes in a string to a specified value.
+- char *_memcpy(char *dest, char *src, unsigned int n) - This function copies a specified number of bytes from the source string to the destination string.
+- char *_strchr(char *s, char c) - This function searches a string for a specified character and returns a pointer to the first occurrence of that character.
+- unsigned int _strspn(char *s, char *accept) - This function returns the length of the initial segment of a string that consists entirely of characters from a specified set.
+- char *_strpbrk(char *s, char *accept) - This function searches a string for any of a set of specified characters and returns a pointer to the first occurrence of one of those characters.
+- char *_strstr(char *haystack, char *needle) - This function searches a string for a specified substring and returns a pointer to the first occurrence of that substring.
