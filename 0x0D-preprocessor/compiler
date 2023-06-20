@@ -1,0 +1,8 @@
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c -o a
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c -o b
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c -o c
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c -o d
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c -o e
+git add .
+git commit -m "0x0D-preprocessor"
+git push
