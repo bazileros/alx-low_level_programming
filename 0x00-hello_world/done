@@ -1,9 +1,0 @@
-#!/bin/bash
-chmod a+x *
-chmod a-x README.md
-git add .
-git commit -m '0x00 Hello, World'
-git push
-clear
-ls
-git status
